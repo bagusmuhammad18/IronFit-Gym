@@ -1,0 +1,180 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /* font-size: 100%;
+  font: inherit; */
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Styles */
+*{
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+:root {
+  --primary: #A22C29;
+  --bg: #0A100D;
+}
+body{
+    background-color: var(--bg);
+    height: 200vh;
+    width: 10vw;
+    /* overflow: hidden; */
+}
+/* Navbar start */
+.navbar {
+    width: 100vw;
+    height: 10vh;
+    /* background-color: var(--primary); */
+    background-color: rgba(162, 44, 41, 0);
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: space-between;
+    /* display: none; */
+    position: fixed;
+    z-index: 99999999;
+    top:0;
+    left:0;
+    right:0;
+    padding: 2rem 5%;
+    /* border-bottom: #A22C29; */
+}
+.logo img{
+    width: 3.5vmax;
+    /* margin: 40px; */
+}
+.navMenu{
+    /* margin: 40px; */
+}
+.navMenu a{
+    text-decoration: none;
+    margin: 10px;
+    color: white;
+    font-size: 0.9em;
+    transition: 0.2s linear;
+}
+.navMenu a:hover{
+    color: rgba(255,255,255,0.6);
+}
+/* Navbar end */
+/* Hero start */
+.containerHero{
+    height: 100vh;
+    width: 100%;
+    /* background-color: green; */
+    position: absolute;
+    overflow: hidden;
+    z-index: -999;
+}
+.containerHero img{
+    width: 100%;
+
+    position: absolute;
+    top: -0em;
+    opacity: 0.5;
+    z-index: -999;
+    /* transform: scale(0.5); */
+    /* background-color: green; */
+
+    /* border: 5px solid green; */
+}
+.containerHero .teksHero{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: green; */
+    z-index: 9999;
+}
+.teksHero h3{
+    width: 70vw;
+    line-height: 4rem;
+    text-transform: uppercase;
+    font-size: 3.5em;
+    color: white;
+    text-align: center;
+}
+
+.teksHero a{
+    background-color: var(--primary);
+    margin: 1em;
+    font-size: 1.2em;
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    transition: 0.2s linear;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.teksHero a:hover{
+  color: var(--primary);
+}
+.teksHero a::before{
+  content:' ';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: -1em;
+  width: 0%;
+  height: 100%;
+  z-index: -1;
+  transform: skew(-20deg);
+  background-color: white;
+  transition: 0.3s ease-out;
+  transform-origin: 0 0;
+  /* transform: scaleX(0); */
+
+}
+.teksHero a:hover::before{
+  height: 100%;
+  width: 115%;
+
+}
+
+/* Hero end */
